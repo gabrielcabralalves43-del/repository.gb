@@ -1,0 +1,26 @@
+name: Primeiro Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  construir:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar o código do repositório
+        uses: actions/checkout@v4
+
+      - name: Mostrar mensagem inicial
+        run: echo "Iniciando a automação da fábrica"
+
+      - name: Simular etapa de montagem
+        run: echo "Montando a estrutura do projeto"
+
+      - name: Simular etapa de testes
+        run: echo "Realizando testes no sistema"
+
+      - name: Finalizar processo
+        run: echo "Workflow finalizado com sucesso"
